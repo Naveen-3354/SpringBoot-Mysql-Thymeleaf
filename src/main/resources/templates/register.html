@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body class="bg-blue-200 flex items-center justify-center w-screen h-screen">
+<div class="size-1/2 flex items-center rounded-2xl main overflow-hidden">
+    <div
+            class="flex-1 right bg-red-400 h-full flex justify-center items-center flex-col gap-8"
+    >
+        <h1 class="text-4xl font-medium font-mono">Register</h1>
+        <form action="#" class="flex flex-col gap-5">
+            <div class="inputs">
+                <input
+                        type="text"
+                        placeholder="Username"
+                        class="rounded-full w-72 h-11 p-6"
+                />
+            </div>
+            <div class="inputs">
+                <input
+                        type="text"
+                        placeholder="Email"
+                        class="rounded-full w-72 h-11 p-6"
+                />
+            </div>
+            <div class="inputs">
+                <input
+                        type="text"
+                        placeholder="Number"
+                        class="rounded-full w-72 h-11 p-6"
+                />
+            </div>
+            <div class="inputs">
+                <input
+                        type="text"
+                        placeholder="Password"
+                        class="rounded-full w-72 h-11 p-6"
+                />
+            </div>
+            <button
+                    class="bg-green-500 h-10 hover:bg-gray-300 hover:text-black rounded-full font-medium"
+            >
+                Submit
+            </button>
+        </form>
+    </div>
+    <div
+            class="flex-1 left h-full bg-gray-100 flex flex-col justify-center items-center gap-9"
+    >
+        <h1 class="text-3xl text-stone-700 font-small">New Here</h1>
+        <p class="text-center text-gray-900 text-2xl">
+            Your are at right point.
+        </p>
+        <p class="w-11/12 p-6 leading-7 font-sans text-base font-normal">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+            temporibus. Nam praesentium dignissimos .
+        </p>
+        <a
+                th:href="@{/}"
+                class="bg-blue-600 hover:bg-black w-60 text-center h-9 flex justify-center items-center font-normal text-white text-lg rounded-full"
+        >Login here.</a
+        >
+    </div>
+</div>
+</body>
+</html>
