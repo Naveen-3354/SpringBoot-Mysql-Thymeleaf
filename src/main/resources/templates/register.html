@@ -12,9 +12,10 @@
             class="flex-1 right bg-red-400 h-full flex justify-center items-center flex-col gap-8"
     >
         <h1 class="text-4xl font-medium font-mono">Register</h1>
-        <form action="#" class="flex flex-col gap-5">
+        <form action="#" class="flex flex-col gap-5" th:action="@{/save}" th:object="${UserDetails}">
             <div class="inputs">
                 <input
+                        th:field="*{username}"
                         type="text"
                         placeholder="Username"
                         class="rounded-full w-72 h-11 p-6"
@@ -22,6 +23,7 @@
             </div>
             <div class="inputs">
                 <input
+                        th:field="*{email}"
                         type="text"
                         placeholder="Email"
                         class="rounded-full w-72 h-11 p-6"
@@ -29,6 +31,7 @@
             </div>
             <div class="inputs">
                 <input
+                        th:field="*{number}"
                         type="text"
                         placeholder="Number"
                         class="rounded-full w-72 h-11 p-6"
@@ -36,13 +39,14 @@
             </div>
             <div class="inputs">
                 <input
+                        th:field="*{password}"
                         type="text"
                         placeholder="Password"
                         class="rounded-full w-72 h-11 p-6"
                 />
             </div>
             <button
-                    class="bg-green-500 h-10 hover:bg-gray-300 hover:text-black rounded-full font-medium"
+                    class="bg-green-500 h-10 hover:bg-gray-300 hover:text-black rounded-full font-medium" type="submit"
             >
                 Submit
             </button>
